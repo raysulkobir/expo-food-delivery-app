@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
 import { Provider } from "react-redux";
-import '../global.css';
 import { store } from "../src/store";
+import './globals.css';
 
 export default function RootLayout() {
   return (

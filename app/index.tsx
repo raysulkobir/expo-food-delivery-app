@@ -1,11 +1,10 @@
-import OnboardingScreens from "@/src/features/onboarding/screens/OnboardingScreens";
+import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
  <SafeAreaView>
-      <p className="text-lg font-medium">Welcome to Tailwind</p>
-      <OnboardingScreens/>
+      <Text className="text-red-500 text-center">Welcome to Tailwind</Text>
  </SafeAreaView>
   );
 }
