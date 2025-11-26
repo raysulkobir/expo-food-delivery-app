@@ -1,8 +1,13 @@
-import React from 'react'
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import Card from './card'
+import { useRouter } from "expo-router";
+import React from 'react';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Card from './card';
+
 
 const FeaturedRow = () => {
+  const router = useRouter();
+
+
   return (
     <View>
         <View className="flex-row justify-between items-center mb-4">
@@ -11,9 +16,13 @@ const FeaturedRow = () => {
                 <Text className="text-gray-500 font-semibold text-sm"> Lorem ipsum dolor sit amet consectetur </Text>
             </View>
 
-              <TouchableOpacity>
-                  <Text className="text-primary px-4 text-lg mt-1 font-bold ">See All</Text>
-              </TouchableOpacity>
+            <TouchableOpacity
+          onPress={() => router.push("/(router)/restaurant")}
+            >
+              <Text className="text-primary px-4 text-lg mt-1 font-bold">
+                See All
+              </Text>
+            </TouchableOpacity>
           </View>
 
           <ScrollView
